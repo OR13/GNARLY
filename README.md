@@ -26,10 +26,17 @@ Visit [http://localhost:5000](http://localhost:5000)
 
 ![create an api that supports scopes](./docs/auth0-create-api.png)
 
-2. Create an Scopes in Auth0 from the OAS 3.0 Spec guidelines
+2. Create a Scopes in Auth0 from the OAS 3.0 Spec guidelines
 
 ![setup scopes](./docs/auth0-scopes.png)
 
 3. Configure OAS 3.0 YAML to use Auth0
 
 ![use scopes from oas3](./docs/oas-permissions.png)
+
+If you are interested in adding additional security schemes, checkout:
+
+[OpenAPI Specification](https://swagger.io/specification/)
+
+Funny how they don't seem to be listing GNAP or RAR there...
+...almost like they are not mature enough to use yet.
