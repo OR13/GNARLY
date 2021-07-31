@@ -1,6 +1,6 @@
 ### GNARYLY
 
-[VC Data Model + OAS 3.0 + OAuth2](https://or13.github.io/GNARLY/v1.0.0/)
+[VC Data Model + OAS 3.0 + OAuth2](https://gnarly.or13.io)
 
 This repo was created to as a proposal for changes to the VC-HTTP-API.
 
