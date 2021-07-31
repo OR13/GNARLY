@@ -1,0 +1,47 @@
+title: 'Presentation Request Query'
+description: "A verififiers request for a holder to present credentials"
+type: object
+properties:
+  domain:
+    type: string
+    description: See [domain](https://w3id.org/security#domain)
+  challenge:
+    type: string
+    description: See [challenge](https://w3id.org/security#challenge)
+  query:
+    type: array
+    description: See [VP Request Spec](https://w3c-ccg.github.io/vp-request-spec/#format)
+    items:
+      type: object
+example:
+  {
+    'domain': 'verifier.example.com',
+    'challenge': '3182bdea-63d9-11ea-b6de-3b7c1404d57f',
+    'query': [
+      {
+      'type': 'QueryByFrame',
+      'credentialQuery':
+        {
+          'frame':
+            {
+              "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "https://w3id.org/vaccination/v1",
+                  "https://w3id.org/security/suites/bls12381-2020/v1"
+                ],
+                "type": [
+                  "VerifiableCredential",
+                  "VaccinationCertificate"
+                ],
+                "credentialSubject": {
+                  "@explicit": true,
+                  "type": [
+                    "VaccinationEvent"
+                  ],
+                  "batchNumber": {},
+                  "countryOfVaccination": {}
+                }
+            },
+        },
+    }]
+  }

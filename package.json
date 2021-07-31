@@ -13,10 +13,10 @@
   "scripts": {
     "start": "tsdx watch",
     "preserve": "npm run build",
-    "serve:api:docs": "serve ./src/spec/v1.0.0",
+    "serve:docs": "serve ./docs",
     "serve": "node run.js",
     "build": "tsdx build --format cjs --transpileOnly && cp -r ./src/spec ./dist/spec",
-    "build:docs": "cp -r ./src/spec/ ./docs",
+    "build:docs": "cp -r ./src/spec/v1.0.0/ ./docs",
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "npm run build",

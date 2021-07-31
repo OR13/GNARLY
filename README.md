@@ -14,7 +14,8 @@ Main improvements over the current API:
 #### API Documentation
 
 ```
-npm run serve:api:docs
+npm run build:docs
+npm run serve:docs
 ```
 
 Visit [http://localhost:5000](http://localhost:5000)

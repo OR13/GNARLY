@@ -1,0 +1,23 @@
+post:
+  operationId: submitPresentation
+  summary: Submit Presentation
+  description: Submit a Verifiable Presentation to a recipient
+  tags:
+    - Exchange
+  security:
+    - OAuth2:
+        - 'exchange:presentations'
+
+  requestBody:
+    description: A presentation satisfying the the response from notification.
+    content:
+      application/json:
+        schema:
+          $ref: '../../../schemas/VerifiablePresentation.yml'
+
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: '../../../schemas/VerificationResult.yml'

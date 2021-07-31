@@ -1,0 +1,42 @@
+title: "Verifiable Presentation"
+description: Verifiable Presentation implementing the [W3C data model](https://www.w3.org/TR/vc-data-model) with proof
+type: object
+required:
+  - '@context'
+  - type
+properties:
+  '@context':
+    $ref: './Context.yml'
+  type:
+    $ref: './Type.yml'
+  holder:
+    $ref: './Holder.yml'
+  proof:
+    type: object
+example:
+  {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+    ],
+    "type": ["VerifiablePresentation"],
+    "verifiableCredential": [{
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+      ],
+      "id": "http://example.edu/credentials/3732",
+      "type": ["VerifiableCredential"],
+      "issuer": {
+        "id": "did:example:123"
+      },
+      "issuanceDate": "2010-01-01T19:23:24Z",
+      "credentialSubject": { "id": "did:example:456" },
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2010-01-01T19:23:24Z",
+        "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..RTYVNuQseeKltCDWFlYFV5mBEOuKFrWTPyLApIQixiTUWkIRzbzAbFLkD1dTmo4_vck1wPTmhGKpeyfw2QW3Cg",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:example:123#key-0"
+      }
+  }],
+}

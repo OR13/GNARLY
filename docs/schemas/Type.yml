@@ -1,0 +1,8 @@
+title: 'Type'
+description: 'A JSON-LD type'
+oneOf:
+  - type: string
+  - type: array
+    items:
+      type: string
+example: ['VerifiableCredential']
