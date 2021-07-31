@@ -1,0 +1,25 @@
+post:
+  operationId: createPresentation
+  summary: Create a Verifiable Presentation
+  description: Creates a W3C Verifiable Presentation
+  tags:
+    - Holder
+  security:
+    - OAuth2:
+        - 'create:presentations'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            presentation:
+              $ref: '../../../schemas/Presentation.yml'
+            options:
+              $ref: '../../../schemas/PresentationOptions.yml'
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: '../../../schemas/VerifiablePresentation.yml'

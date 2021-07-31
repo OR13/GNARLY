@@ -1,0 +1,38 @@
+title: 'Verification Result'
+description: The result of verifying a [W3C VC Data Model](https://www.w3.org/TR/vc-data-model) Verifiable Presentation
+type: object
+properties:
+  verified: 
+    type: boolean
+  reasons:
+    type: array
+    item:
+      type: object
+      properties:
+        message: 
+          type: string
+example: 
+  {
+    "verified": false,
+    "reasons": [
+      {
+        "message": "Presentation signature verification failed."
+      },
+      {
+        "message": "Presentation challenge does not match."
+      },
+        {
+        "message": "Presentation domain does not match."
+      },
+      {
+        "message": "Credential signature verification failed."
+      },
+      {
+        "message": "Credential not activated yet."
+      },
+      {
+        "message": "Credential expired."
+      }
+    ]
+  }
+

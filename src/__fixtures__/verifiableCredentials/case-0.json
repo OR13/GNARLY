@@ -1,0 +1,50 @@
+{
+  "status": 200,
+  "body": {
+    "items": [
+      {
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/vaccination/v1",
+          "https://w3id.org/security/suites/jws-2020/v1"
+        ],
+        "type": ["VerifiableCredential", "VaccinationCertificate"],
+        "id": "urn:uvci:af5vshde843jf831j128fj",
+        "name": "COVID-19 Vaccination Certificate",
+        "description": "COVID-19 Vaccination Certificate",
+        "issuanceDate": "2019-12-03T12:19:52Z",
+        "expirationDate": "2029-12-03T12:19:52Z",
+        "issuer": "did:key:z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU",
+        "credentialSubject": {
+          "type": "VaccinationEvent",
+          "batchNumber": "1183738569",
+          "administeringCentre": "MoH",
+          "healthProfessional": "MoH",
+          "countryOfVaccination": "NZ",
+          "recipient": {
+            "type": "VaccineRecipient",
+            "givenName": "JOHN",
+            "familyName": "SMITH",
+            "gender": "Male",
+            "birthDate": "1958-07-17"
+          },
+          "vaccine": {
+            "type": "Vaccine",
+            "disease": "COVID-19",
+            "atcCode": "J07BX03",
+            "medicinalProductName": "COVID-19 Vaccine Moderna",
+            "marketingAuthorizationHolder": "Moderna Biotech"
+          }
+        },
+        "proof": {
+          "type": "JsonWebSignature2020",
+          "created": "2021-07-31T16:13:28Z",
+          "verificationMethod": "did:key:z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU#z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU",
+          "proofPurpose": "assertionMethod",
+          "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..aT1Hj3_R-JXaqLVbgWSmP4QMs-SFbViwANMXHVtgMqJ3Lz6JDhNN_MHLp91iPi-z4sMloSUYDvHzoqvM_83aAw"
+        }
+      },
+      "eyJhbGciOiJFZERTQSIsImtpZCI6ImRpZDprZXk6ejZNa2c0cnVZSk03TjZ4UmFnVEVuWjR3UXppdnFramVuYUdyTUFOcXpVNUxiZHVVI3o2TWtnNHJ1WUpNN042eFJhZ1RFblo0d1F6aXZxa2plbmFHck1BTnF6VTVMYmR1VSJ9.eyJpc3MiOiJkaWQ6a2V5Ono2TWtnNHJ1WUpNN042eFJhZ1RFblo0d1F6aXZxa2plbmFHck1BTnF6VTVMYmR1VSIsInN1YiI6eyJ0eXBlIjoiVmFjY2luYXRpb25FdmVudCIsImJhdGNoTnVtYmVyIjoiMTE4MzczODU2OSIsImFkbWluaXN0ZXJpbmdDZW50cmUiOiJNb0giLCJoZWFsdGhQcm9mZXNzaW9uYWwiOiJNb0giLCJjb3VudHJ5T2ZWYWNjaW5hdGlvbiI6Ik5aIiwicmVjaXBpZW50Ijp7InR5cGUiOiJWYWNjaW5lUmVjaXBpZW50IiwiZ2l2ZW5OYW1lIjoiSk9ITiIsImZhbWlseU5hbWUiOiJTTUlUSCIsImdlbmRlciI6Ik1hbGUiLCJiaXJ0aERhdGUiOiIxOTU4LTA3LTE3In0sInZhY2NpbmUiOnsidHlwZSI6IlZhY2NpbmUiLCJkaXNlYXNlIjoiQ09WSUQtMTkiLCJhdGNDb2RlIjoiSjA3QlgwMyIsIm1lZGljaW5hbFByb2R1Y3ROYW1lIjoiQ09WSUQtMTkgVmFjY2luZSBNb2Rlcm5hIiwibWFya2V0aW5nQXV0aG9yaXphdGlvbkhvbGRlciI6Ik1vZGVybmEgQmlvdGVjaCJ9fSwidmMiOnsiQGNvbnRleHQiOlsiaHR0cHM6Ly93d3cudzMub3JnLzIwMTgvY3JlZGVudGlhbHMvdjEiLCJodHRwczovL3czaWQub3JnL3ZhY2NpbmF0aW9uL3YxIiwiaHR0cHM6Ly93M2lkLm9yZy9zZWN1cml0eS9zdWl0ZXMvandzLTIwMjAvdjEiXSwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIlZhY2NpbmF0aW9uQ2VydGlmaWNhdGUiXSwiaWQiOiJ1cm46dXZjaTphZjV2c2hkZTg0M2pmODMxajEyOGZqIiwibmFtZSI6IkNPVklELTE5IFZhY2NpbmF0aW9uIENlcnRpZmljYXRlIiwiZGVzY3JpcHRpb24iOiJDT1ZJRC0xOSBWYWNjaW5hdGlvbiBDZXJ0aWZpY2F0ZSIsImlzc3VhbmNlRGF0ZSI6IjIwMTktMTItMDNUMTI6MTk6NTJaIiwiZXhwaXJhdGlvbkRhdGUiOiIyMDI5LTEyLTAzVDEyOjE5OjUyWiIsImlzc3VlciI6ImRpZDprZXk6ejZNa2c0cnVZSk03TjZ4UmFnVEVuWjR3UXppdnFramVuYUdyTUFOcXpVNUxiZHVVIiwiY3JlZGVudGlhbFN1YmplY3QiOnsidHlwZSI6IlZhY2NpbmF0aW9uRXZlbnQiLCJiYXRjaE51bWJlciI6IjExODM3Mzg1NjkiLCJhZG1pbmlzdGVyaW5nQ2VudHJlIjoiTW9IIiwiaGVhbHRoUHJvZmVzc2lvbmFsIjoiTW9IIiwiY291bnRyeU9mVmFjY2luYXRpb24iOiJOWiIsInJlY2lwaWVudCI6eyJ0eXBlIjoiVmFjY2luZVJlY2lwaWVudCIsImdpdmVuTmFtZSI6IkpPSE4iLCJmYW1pbHlOYW1lIjoiU01JVEgiLCJnZW5kZXIiOiJNYWxlIiwiYmlydGhEYXRlIjoiMTk1OC0wNy0xNyJ9LCJ2YWNjaW5lIjp7InR5cGUiOiJWYWNjaW5lIiwiZGlzZWFzZSI6IkNPVklELTE5IiwiYXRjQ29kZSI6IkowN0JYMDMiLCJtZWRpY2luYWxQcm9kdWN0TmFtZSI6IkNPVklELTE5IFZhY2NpbmUgTW9kZXJuYSIsIm1hcmtldGluZ0F1dGhvcml6YXRpb25Ib2xkZXIiOiJNb2Rlcm5hIEJpb3RlY2gifX0sInByb29mIjp7InR5cGUiOiJKc29uV2ViU2lnbmF0dXJlMjAyMCIsImNyZWF0ZWQiOiIyMDIxLTA3LTMxVDE2OjEzOjI4WiIsInZlcmlmaWNhdGlvbk1ldGhvZCI6ImRpZDprZXk6ejZNa2c0cnVZSk03TjZ4UmFnVEVuWjR3UXppdnFramVuYUdyTUFOcXpVNUxiZHVVI3o2TWtnNHJ1WUpNN042eFJhZ1RFblo0d1F6aXZxa2plbmFHck1BTnF6VTVMYmR1VSIsInByb29mUHVycG9zZSI6ImFzc2VydGlvbk1ldGhvZCIsImp3cyI6ImV5SmhiR2NpT2lKRlpFUlRRU0lzSW1JMk5DSTZabUZzYzJVc0ltTnlhWFFpT2xzaVlqWTBJbDE5Li5hVDFIajNfUi1KWGFxTFZiZ1dTbVA0UU1zLVNGYlZpd0FOTVhIVnRnTXFKM0x6NkpEaE5OX01ITHA5MWlQaS16NHNNbG9TVVlEdkh6b3F2TV84M2FBdyJ9fSwianRpIjoidXJuOnV2Y2k6YWY1dnNoZGU4NDNqZjgzMWoxMjhmaiIsIm5iZiI6MTU3NTM3NTU5MiwiZXhwIjoxODkwOTk0NzkyfQ.ZXlKaGJHY2lPaUpGWkVSVFFTSXNJbUkyTkNJNlptRnNjMlVzSW1OeWFYUWlPbHNpWWpZMElsMTkuLjFJWUt1N0hiX01pZGV2cENIYkhrdDVsLWQ3cjRPSUVfeWxqclBOX05PazVfbU1IWENRMkcwWmdzQml0ZmRrRkM0alY3YXIwdnJZc1dIN1hHcUE0R0FB"
+    ]
+  }
+}

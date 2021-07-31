@@ -1,0 +1,77 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "preserve": "npm run build",
+    "serve:api:docs": "serve ./src/spec/v1.0.0",
+    "serve": "node run.js",
+    "build": "tsdx build --format cjs --transpileOnly && cp -r ./src/spec ./dist/spec",
+    "build:docs": "cp -r ./src/spec/ ./docs",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "npm run build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "typescript-fastify-static-oas-3",
+  "author": "Orie Steele",
+  "module": "dist/typescript-fastify-static-oas-3.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/typescript-fastify-static-oas-3.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/typescript-fastify-static-oas-3.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.11.0",
+    "husky": "^6.0.0",
+    "serve": "^12.0.0",
+    "size-limit": "^4.11.0",
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@mattrglobal/jsonld-signatures-bbs": "^0.10.1-unstable.3000f3c",
+    "@transmute/credentials-context": "^0.7.0-unstable.6",
+    "@transmute/did-context": "^0.7.0-unstable.6",
+    "@transmute/did-key.js": "^0.3.0-unstable.4",
+    "@transmute/json-web-signature": "^0.7.0-unstable.6",
+    "@transmute/security-context": "^0.7.0-unstable.6",
+    "@transmute/vc.js": "^0.7.0-unstable.6",
+    "fastify": "^3.17.0",
+    "fastify-static": "^4.2.2",
+    "fastify-swagger": "^4.7.0",
+    "js-yaml": "^4.1.0",
+    "jsonld": "^5.2.0",
+    "uuid": "^8.3.2"
+  }
+}

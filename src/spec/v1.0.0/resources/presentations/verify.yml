@@ -1,0 +1,25 @@
+post:
+  operationId: verifyPresentation
+  summary: Verifies a Verifiable Presentation
+  description: Verifies a W3C Verifiable Presentation
+  tags:
+    - Verifier
+  security:
+    - OAuth2:
+        - 'verify:presentations'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            verifiablePresentation:
+              $ref: '../../../schemas/VerifiablePresentation.yml'
+            options:
+              $ref: '../../../schemas/PresentationOptions.yml'
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: '../../../schemas/VerificationResult.yml'

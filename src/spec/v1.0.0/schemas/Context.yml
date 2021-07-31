@@ -1,0 +1,15 @@
+title: '@context'
+description: 'JSON-LD context'
+oneOf:
+  - type: string
+  - type: array
+    items:
+      oneOf:
+        - type: string
+        - type: object
+  - type: object
+example:
+  [
+    'https://www.w3.org/2018/credentials/v1',
+    'https://w3id.org/security/suites/bls12381-2020/v1',
+  ]

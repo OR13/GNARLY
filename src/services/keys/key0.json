@@ -1,0 +1,16 @@
+{
+    "id": "did:key:z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU#z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU",
+    "type": "JsonWebKey2020",
+    "controller": "did:key:z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU",
+    "publicKeyJwk": {
+      "kty": "OKP",
+      "crv": "Ed25519",
+      "x": "F_pu0-LMpTlrAdIymPQmVfsepM2RiVLHXNGMKlE_EjM"
+    },
+    "privateKeyJwk": {
+      "kty": "OKP",
+      "crv": "Ed25519",
+      "x": "F_pu0-LMpTlrAdIymPQmVfsepM2RiVLHXNGMKlE_EjM",
+      "d": "iKQWL2rLPV1gyGWaQyX7prrlHK3596gyYoT1vmTJZLQ"
+    }
+}

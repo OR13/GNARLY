@@ -1,0 +1,8 @@
+title: 'Issuance Options'
+description: "Options for credential issuance"
+type: object
+properties:
+  format: 
+    type: string
+    enum: [vc, vc-jwt]
+    example: 'vc'

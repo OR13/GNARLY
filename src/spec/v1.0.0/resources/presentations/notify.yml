@@ -1,0 +1,22 @@
+post:
+  operationId: notifyPresentation
+  summary: Notify Presentation
+  description: Notifiers a recipient of a sender's intention to submit a presentation
+  tags:
+    - Exchange
+  security:
+    - OAuth2:
+        - 'exchange:presentations'
+  requestBody:
+    description: Details the client provides to the server to help it decide if the presentation should be made.
+    content:
+      application/json:
+        schema:
+          $ref: '../../../schemas/PresentationNotificationQuery.yml'
+
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: '../../../schemas/PresentationRequestQuery.yml'
