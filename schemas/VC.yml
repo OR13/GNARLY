@@ -1,0 +1,14 @@
+title: 'Verifiable Credential'
+description: A JSON-LD Verifiable Credential with a proof, implementing the W3C data model (https://www.w3.org/TR/vc-data-model).
+type: object
+required:
+  - type
+  - credentialSubject
+  - proof
+  - issuer
+  - issuanceDate
+allOf:
+  - $ref: './Credential.yml'
+properties:
+  proof:
+    type: object

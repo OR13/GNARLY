@@ -1,0 +1,59 @@
+title: 'Verifiable Presentation'
+description: 'A W3C Verifiable Presentation'
+oneOf:
+  - $ref: './JWT.yml'
+  - $ref: './VP.yml'
+example:
+  {
+    '@context':
+      [
+        'https://www.w3.org/2018/credentials/v1',
+        'https://w3id.org/security/suites/jws-2020/v1',
+        'https://w3id.org/security/suites/bls12381-2020/v1',
+      ],
+    'type': ['VerifiablePresentation'],
+    'holder': 'did:key:z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU',
+    'verifiableCredential':
+      [
+        {
+          '@context':
+            [
+              'https://www.w3.org/2018/credentials/v1',
+              'https://w3id.org/vaccination/v1',
+              'https://w3id.org/security/suites/bls12381-2020/v1',
+            ],
+          'id': 'urn:uvci:af5vshde843jf831j128fj',
+          'type': ['VaccinationCertificate', 'VerifiableCredential'],
+          'description': 'COVID-19 Vaccination Certificate',
+          'name': 'COVID-19 Vaccination Certificate',
+          'credentialSubject':
+            {
+              'id': 'urn:bnid:_:c14n2',
+              'type': 'VaccinationEvent',
+              'batchNumber': '1183738569',
+              'countryOfVaccination': 'NZ',
+            },
+          'expirationDate': '2029-12-03T12:19:52Z',
+          'issuanceDate': '2019-12-03T12:19:52Z',
+          'issuer': 'did:key:z5TcDVRemCWTd6qwxxhFeYDpQhK4pUYtuutodKP2MSDjzcqokf6cNCARsaF8JNZQ8FzWAYfFZbUqUCUDMWeWp8xVkRSr9z5Tf5k2tJgpjsqNM23E4VjHsCzN6WcSvLGKSA9VEMTc1d2F81mCCauerPY1VC8vPTkvtmEQZfmaZ54x15PJwbhkBxaEbydWjd7D2CWHbkFg9',
+          'proof':
+            {
+              'type': 'BbsBlsSignatureProof2020',
+              'created': '2021-07-31T17:33:53Z',
+              'nonce': 'd0AN9HZN4kFIMCWAyNzT0AiVn/LVZma71sbQlqVPRq6Lwo/hMZLXc6gVkRny+etS3qU=',
+              'proofPurpose': 'assertionMethod',
+              'proofValue': 'AB0GQA//iP+JNCZPvAi3Oj+9sCHxVwGHX8G4ZaI6G1DoPpVIvFLqFlevU2tUp0fn4uh+Nd/4rI+hhXxTNGixrRX1iZGVPtsUbIISYES9clC3n6vXJen3dtuFAyMRKiQW8GRd03Y4sxWRNT4/KM2jprDv/7gPerJ2S+D3ZStdzzzOLl6A7bybMtTB/DVbh8XAsPBKDWMXAAAAdKvTVx9IBxn7tl0bPcEiIEwzn1IRagYeoIW3IcMCx4PfY2IuYJ6lRJmqNqPoCua/KQAAAAI7mcoaBe19e3jkGqUe55PFBa5KFO6E+d7NpjHw+TT0+EdfbI2cyELJdmCRE6FQd/+3x7fthNj/1XfnOd2TK7oRgPDIcKsJG8ctBf66b+VoeW2OqBYdWZN0MnC5Uo4rTxhWgl/L7EwcjL9HXnhQC29MAAAAED3MYT2LcPBUYyKmrRzWyZ7RdJxN9sXWxljn8EWcp4pOGry9q96DhPhFKEMuWjx4E1kYYCNoETx2vJsApIAEhZoH+K7X+GBQSp96f/Kv79X00jIuovjKWsHVYUbZEsYosCtlxmZnVjg+P7g6mQv1WXtQHCEp3Yg3rqBAaymsde7oEInG0UnKCVVakjrlmc4a+rHViM10Cr5WhHcwAVSHwsQGUJoe91/PSfEQsyqPdAIlW6Eq6xdYMBoGWbr1jXopZWt9DJFmiDwtu2oA0+7nMywSe4T61JiJMxuGezBeOy3tMbvQLv6H5odI1NwiNIA0MKupRJ2H0ctbLziDQFyS1UArgzicH7U222gansqXeI5Gt/zN6hDI5qE3GlXY8KXNWE7wNhPSr1kOq2gK92PNcDqYzUSsFWksYqg5QUFD4Vb0W0kzBVILi53/I/3s9vFyMWDQ8WUwyo1WAaLqLaNuQ7QDFt/CMhCoW7cbKPnO8OtsyjrUYy0azmpsSZBViUHLOW9sgaSfUaGVVzYh4oCvBM4IBDfAm9wS6uGjezfmI5sWA/3sYfCleB3UKf9esl8gLq4yfi1rFmHRKwWhnUALmCZpnIvdwE6xB9UxK2dnGtqVbcOrjff3xVH3JJwAwgit3zCPAHP7ogpXEbhrZkbd73y4T6mCVig8g8MEvH+ErZ9Z',
+              'verificationMethod': 'did:key:z5TcDVRemCWTd6qwxxhFeYDpQhK4pUYtuutodKP2MSDjzcqokf6cNCARsaF8JNZQ8FzWAYfFZbUqUCUDMWeWp8xVkRSr9z5Tf5k2tJgpjsqNM23E4VjHsCzN6WcSvLGKSA9VEMTc1d2F81mCCauerPY1VC8vPTkvtmEQZfmaZ54x15PJwbhkBxaEbydWjd7D2CWHbkFg9#zUC7GEUemCyub4Q5mAhXkNZVcVrCWz57UvxaYrd2o8iBfDMhJhAVc5U47x5J55kYHVhud5oWFXC4DyeywbcKLaqi2NjbyMgTREk8J6ypRU9drJBnVXXboReHLhhd1T4QU21Gzhb',
+            },
+        },
+      ],
+    'proof':
+      {
+        'type': 'JsonWebSignature2020',
+        'created': '2021-07-31T17:55:42Z',
+        'verificationMethod': 'did:key:z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU#z6Mkg4ruYJM7N6xRagTEnZ4wQzivqkjenaGrMANqzU5LbduU',
+        'proofPurpose': 'authentication',
+        'challenge': '123',
+        'jws': 'eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..bjr_SMSf8GiObEdEb1ybAAP8iKgnlgm_lx4E9QbAv5Qds8MPIB2FTCHF_dgIavR1ehIp_xwoO47S6j9H_L8fDQ',
+      },
+  }

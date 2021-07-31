@@ -1,0 +1,10 @@
+title: 'Holder'
+description: "A Holder of Verifiable Credentials"
+oneOf:
+  - type: string
+  - type: object
+    properties:
+      id: 
+        type: string
+    required: ['id']
+example: 'did:example:123'

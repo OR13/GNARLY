@@ -1,0 +1,86 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json
+openapi: '3.0.0'
+info:
+  version: 1.0.0
+  title: GNARLY
+  description: >
+    [VC Data Model](https://www.w3.org/TR/vc-data-model/) and [OpenAPI Specification 3.0](https://swagger.io/specification/)
+  license:
+    name: Apache-2.0
+    url: https://github.com/OR13/GNARLY
+  contact:
+    name: GitHub Source Code
+    url: https://github.com/OR13/GNARLY
+
+servers:
+  - url: http://localhost:8080
+  - url: http://petstore.swagger.io/v1
+
+tags:
+  - name: Issuer
+    description: Enables credential issuance.
+  - name: Holder
+    description: Enables credential presentation.
+  - name: Verifier
+    description: Enables credential verification.
+  - name: Exchange
+    description: Enables presentation exchange.
+
+paths:
+  /credentials/create:
+    $ref: './resources/credentials/create.yml'
+  /credentials/derive:
+    $ref: './resources/credentials/derive.yml'
+  /credentials/status:
+    $ref: './resources/credentials/status.yml'
+  /presentations/create:
+    $ref: './resources/presentations/create.yml'
+  /presentations/verify:
+    $ref: './resources/presentations/verify.yml'
+  /presentations/available:
+    $ref: './resources/presentations/notify.yml'
+  /presentations/submissions:
+    $ref: './resources/presentations/submit.yml'
+
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://or13.us.auth0.com/authorize
+          tokenUrl: https://or13.us.auth0.com/oauth/token
+          redirectUri: 'http://localhost:8080/api/docs/static/oauth2-redirect.html'
+          scopes:
+            'create:credentials': Grants permission to create credentials
+            'derive:credentials': Grants permission to derive credentials
+            'create:presentations': Grants permission to create presentations
+            'verify:presentations': Grants permission to verify presentations
+            'exchange:presentations': Grants permission to exchange presentations
+  schemas:
+    Context:
+      $ref: './schemas/Context.yml'
+    Type:
+      $ref: './schemas/Type.yml'
+    CredentialSubject:
+      $ref: './schemas/CredentialSubject.yml'
+    Credential:
+      $ref: './schemas/Credential.yml'
+    VC:
+      $ref: './schemas/VC.yml'
+    JWT:
+      $ref: './schemas/JWT.yml'
+    VerifiableCredential:
+      $ref: './schemas/VerifiableCredential.yml'
+    Frame:
+      $ref: './schemas/Frame.yml'
+    Presentation:
+      $ref: './schemas/Presentation.yml'
+    VerifiablePresentation:
+      $ref: './schemas/VerifiablePresentation.yml'
+    PresentationNotificationQuery:
+      $ref: './schemas/PresentationNotificationQuery.yml'
+    PresentationRequestQuery:
+      $ref: './schemas/PresentationRequestQuery.yml'
+    VerificationResult:
+      $ref: './schemas/VerificationResult.yml'

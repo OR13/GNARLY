@@ -1,0 +1,30 @@
+title: 'Presentation Notification Query'
+description: "A sender's notification to a recipient that they would like to submit a presentation of a given type."
+type: object
+properties:
+  query:
+    type: array
+    description: See [VP Request Spec](https://w3c-ccg.github.io/vp-request-spec/#format)
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          description: 'The type of query the server should reply with.'
+          example: 'RequestQueryByFrame'
+        credentialQuery:
+          type: array
+          description: "Details of the client's available presentation"
+          items:
+            type: object
+example:
+  {
+    "query": [{
+      'type':
+        [
+          'VerifiableCredential',
+          'VaccinationCertificate',
+        ],
+      'reason': 'Wallet XYZ is ready to selectively disclose new credentials.',
+    }]
+  }

@@ -1,0 +1,12 @@
+title: 'Presentation Options'
+description: 'Options a holder uses to create presentation. domain and challenge are supplied by the verifier, in their request.'
+type: object
+properties:
+  format:
+    type: string
+    enum: [vp, vp-jwt]
+  domain:
+    type: string
+  challenge:
+    type: string
+example: { 'format': 'vp', 'challenge': '123' }

@@ -1,0 +1,10 @@
+title: 'Issuer'
+description: "Issuer of a Verifiable Credential"
+oneOf:
+  - type: string
+  - type: object
+    properties:
+      id: 
+        type: string
+    required: ['id']
+example: 'did:example:123'
